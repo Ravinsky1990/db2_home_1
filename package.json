@@ -1,0 +1,14 @@
+{
+  "name": "homework_1",
+  "version": "1.0.0",
+  "description": "db2_internship",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "author": "Ravinsky Yuriy",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.5.3"
+  }
+}
