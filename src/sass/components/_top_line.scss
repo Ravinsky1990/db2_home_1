@@ -1,0 +1,50 @@
+/* top-line */
+.top-line{
+    display: flex;
+    padding-left: 120px;;
+    padding-right: 40px;
+    height: 62px;
+    background-color: #fff;
+    justify-content: space-between;
+}
+.top-line__route-list-item{
+    display: inline-block;
+    margin-right: 12px;
+}
+.top-line__rout{
+    display: flex;
+    align-items: center
+}
+.top-line__rout-link{
+    text-decoration: none;
+    font-family: $topLine_font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    color: #252F48;
+    margin-right: 13px;
+}
+.top-line__shevron{
+    visibility: hidden;
+}
+.top-line__shevron_visible{
+    visibility: visible
+}
+
+.current-user{
+    display: flex;
+    align-items: center;
+}
+.current-user__image{
+    margin-right: 9px;
+}
+.current-user__name{
+    margin-right: 8px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #252F48;
+}

@@ -4,7 +4,7 @@
   "description": "add responsive design and gulp",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Ravinsky1990/db2_home_1/issues"
   },
-  "homepage": "https://github.com/Ravinsky1990/db2_home_1#readme"
+  "homepage": "https://github.com/Ravinsky1990/db2_home_1#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "lite-server": "^2.5.3",
+    "node-sass": "^4.12.0"
+  }
 }

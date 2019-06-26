@@ -1,0 +1,57 @@
+/* logo */
+.logo{
+    display: flex;
+    justify-content: center;
+}
+/*sidebar*/
+.sidebar{
+    position: fixed;
+    width: 80px;
+    height: 100vh;
+    padding-top: 18px;
+    background-color: $sideBarColor;
+}
+.sidebar__navigation{
+    margin-top: 74px;
+}
+.sidebar__link{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+}
+
+.sidebar__num-marker{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    background-color:#2A74DB;
+    visibility: hidden;
+    border-radius: 50%;
+    top: -7px;
+    left: 42px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+}
+.sidebar__vertical-marker{
+    width: 4px;
+    height: 48px;
+    background-color:$activeMarker;
+    position: absolute;
+    left: 0;
+    top: -78%;
+    visibility: hidden;
+}
+.sidebar__num-marker_active{
+    visibility: visible;
+}
+.sidebar__vertical-marker_active{
+    visibility: visible;
+}
