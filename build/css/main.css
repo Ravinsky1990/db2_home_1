@@ -23,7 +23,8 @@ body {
   width: 80px;
   height: 100vh;
   padding-top: 18px;
-  background-color: #01134E; }
+  background-color: #01134E;
+  transition: all 0.5s ease; }
   @media screen and (max-width: 570px) {
     .sidebar {
       transform: translateX(-100%); } }
@@ -70,6 +71,32 @@ body {
 
 .sidebar__vertical-marker_active {
   visibility: visible; }
+
+.burger {
+  width: 38px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  right: -38px;
+  visibility: hidden;
+  cursor: pointer; }
+  @media screen and (max-width: 570px) {
+    .burger {
+      visibility: visible; } }
+  .burger .burger__cheese, .burger .burger__salad, .burger .burger__meat {
+    display: block;
+    background-color: #01134E;
+    height: 4px; }
+
+.sidebar_visible {
+  transform: translateX(0);
+  z-index: 99; }
+
+.sidebar_hidden {
+  transform: translateX(-100%);
+  z-index: 99; }
 
 /* top-line */
 .top-line {
