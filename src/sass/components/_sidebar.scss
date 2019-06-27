@@ -81,9 +81,18 @@
         height: 4px;
     }
 }
+//burger animation
+@keyframes cheese_open{
+    from {transform: rotate(0deg)}
+    to {transform: translateY(10px) rotate(-45deg) }
+}
+@keyframes cheese_close{
+    from {transform: rotate(0deg)}
+    to {transform: translateY(10px) rotate(-45deg) }
+}
+
 
 // sidebar modif.
-
 .sidebar_visible{
     transform: translateX(0);
     z-index: 99;
@@ -92,4 +101,18 @@
 .sidebar_hidden{
     transform: translateX(-100%);
     z-index: 99;
+}
+
+//burger modifs.
+
+.cheese-rotateOpen{
+    animation-name:cheese_open;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+.cheese-rotateClose{
+    animation-name:cheese_close;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
 }
