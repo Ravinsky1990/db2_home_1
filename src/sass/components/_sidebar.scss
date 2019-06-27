@@ -10,8 +10,9 @@
     height: 100vh;
     padding-top: 18px;
     background-color: $sideBarColor;
+    transition: all 0.5s ease;
     @include respond_580px{
-        transform: translateX(-100%)
+        transform: translateX(-100%);
     }
 }
 .sidebar__navigation{
@@ -57,4 +58,38 @@
 }
 .sidebar__vertical-marker_active{
     visibility: visible;
+}
+
+// burger
+
+.burger{
+    width: 38px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    right: -38px;
+    visibility: hidden;
+    cursor: pointer;
+    @include respond_580px{
+        visibility: visible;
+    }
+    .burger__cheese, .burger__salad, .burger__meat{
+        display: block;
+        background-color:$sideBarColor;
+        height: 4px;
+    }
+}
+
+// sidebar modif.
+
+.sidebar_visible{
+    transform: translateX(0);
+    z-index: 99;
+}
+
+.sidebar_hidden{
+    transform: translateX(-100%);
+    z-index: 99;
 }
