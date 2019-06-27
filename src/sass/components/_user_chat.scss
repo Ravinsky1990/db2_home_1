@@ -10,9 +10,20 @@
     background-color: #fff;
     border-radius: 4px;
     box-shadow: 0px 0px 30px rgba(153, 163, 174, 0.06);
+    @include respond_866px{
+        margin-right: 10px
+    };
+    @include respond_580px{
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
 }
 .user-list{
     border-right: 1px solid #EDF0F4;
+    @include respond_866px{
+        display: none;
+    }
 }
 .user-item{
     display: flex;
@@ -115,6 +126,10 @@
     overflow-y: scroll;
     padding-right: 40px;
     height: 450px;
+    @include respond_386px{
+        padding-right: 20px;
+        padding-left: 6px;
+    }
 }
 .dialog-content__dialog-item{
     display: flex;
@@ -128,6 +143,9 @@
     border-radius: 5px;
     padding: 11px 14px;
     position: relative;
+    @include respond_386px{
+        flex-grow: 1;
+    }
 }
 .dialog-content__img-wrapper{
     display: flex;
@@ -144,6 +162,9 @@
 .dialog-content__avatar{
     margin-right: 11px;
     visibility:hidden;
+    @include respond_386px{
+        width: 16px;
+    }
 }
 .dialog-content__time{
     font-family: Roboto;
@@ -204,7 +225,7 @@
     display: flex;
 }
 .send-message__input{
-    width: 300px;
+    // width: 300px;
     border: none;
     font-family: Roboto;
     font-style: normal;
@@ -214,7 +235,10 @@
     color: #252F48;
     mix-blend-mode: normal;
     opacity: 0.2;
-    outline: none
+    outline: none;
+    // flex-grow: 1;
+    width: 100%;
+    padding-right: 10px;
 }
 
 .send-message__smile{

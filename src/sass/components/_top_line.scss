@@ -6,6 +6,10 @@
     height: 62px;
     background-color: #fff;
     justify-content: space-between;
+    @include respond_580px{
+        padding-left: 40px;
+        justify-content: flex-end;
+    }
 }
 .top-line__route-list-item{
     display: inline-block;
@@ -13,7 +17,10 @@
 }
 .top-line__rout{
     display: flex;
-    align-items: center
+    align-items: center;
+    @include respond_386px{
+        display: none;
+    }
 }
 .top-line__rout-link{
     text-decoration: none;

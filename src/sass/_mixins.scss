@@ -1,0 +1,14 @@
+@mixin respond_866px {
+    @media screen and (max-width: 866px) {@content}
+};
+
+@mixin respond_580px {
+    @media screen and (max-width: 570px) {@content}
+};
+
+@mixin respond_386px {
+    @media screen and (max-width: 386px) {@content}
+}
+
+
+
