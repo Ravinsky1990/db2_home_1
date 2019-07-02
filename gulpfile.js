@@ -22,10 +22,10 @@ const pug_compiler = ()=>{
 //watcher fn
 const watch_fn = ()=>{
     gulp.watch("./src/sass/**/*.scss",compile_scss);
-    gulp.watch("./src/pug_templates/**/*.pug", pug_compiler)
+    //gulp.watch("./src/pug_templates/**/*.pug", pug_compiler)
 }
 
-exports.build = gulp.series(pug_compiler, compile_scss, watch_fn)
+exports.build = gulp.series(compile_scss, watch_fn)
 
 
 

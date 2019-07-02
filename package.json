@@ -4,7 +4,9 @@
   "description": "add responsive design and gulp",
   "main": "index.js",
   "scripts": {
-    "dev": "lite-server"
+    "dev": "lite-server",
+    "gulp": "gulp build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/Ravinsky1990/db2_home_1#readme",
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "gulp": "^4.0.2",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.2",

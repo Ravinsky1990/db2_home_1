@@ -6,13 +6,13 @@ aside.sidebar
 	div.logo
 		img(src="img/logo.svg", alt="logo")
 	nav.sidebar__navigation
-		include ./mixins/asideLinks.pug
+		include ../mixins/asideLinks.pug
 		-const navData=[{imgSrc:"img/calendar.svg",alt:"calendar",markerActive: true,verticalMarkerActive: false},{imgSrc:"img/my_profile.svg",alt:"myprofile",markerActive: false,verticalMarkerActive: false},{imgSrc:"img/tools.svg",alt:"tools",markerActive: false,verticalMarkerActive: false},{imgSrc:"img/Group.svg",alt:"team",markerActive: false,verticalMarkerActive: false},{imgSrc:"img/messages.svg",alt: "message",markerActive: false,verticalMarkerActive: true}]
 		each linkItem in navData
 			+sidebar__link(linkItem.markerActive, linkItem.verticalMarkerActive, linkItem.imgSrc, linkItem.alt)
 header.top-line
 	ul.top-line__rout
-		include ./mixins/breadcrumbs.pug
+		include ../mixins/breadcrumbs.pug
 		-const breadCrumbsData = [{imgSrc:"img/shevron-right.svg",alt:"shevron",shevronVisible: true, crumbCont:"Home"},{imgSrc:"img/shevron-right.svg",alt:"shevron",shevronVisible: false,crumbCont:"Network"}]
 		each crumb in breadCrumbsData
 			+breadcrumbs(crumb.imgSrc, crumb.alt, crumb.shevronVisible, crumb.crumbCont)

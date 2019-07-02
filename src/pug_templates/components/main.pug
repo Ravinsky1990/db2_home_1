@@ -1,6 +1,6 @@
 main.user-chat
 	section.user-list
-		include ./mixins/userItem.pug
+		include ../mixins/userItem.pug
 		-
 			const userList=[
 				{
@@ -71,7 +71,7 @@ main.user-chat
 			img(src="img/search.svg", alt="search" class="search-message__icon")
 			input(type="text" placeholder="Search message..." class="search-message__input")
 		div.dialog-content
-			include ./mixins/dialogItem.pug
+			include ../mixins/dialogItem.pug
 			-
 				const dialogData=[
 					{

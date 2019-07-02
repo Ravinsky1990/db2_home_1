@@ -63,8 +63,8 @@
 // burger
 
 .burger{
-    width: 38px;
-    height: 32px;
+    width: 34px;
+    height: 28px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -79,6 +79,7 @@
         display: block;
         background-color:$sideBarColor;
         height: 4px;
+        transition: 0.3s all ease
     }
 }
 //burger animation
@@ -89,6 +90,14 @@
 @keyframes cheese_close{
     from {transform: rotate(0deg)}
     to {transform: translateY(10px) rotate(-45deg) }
+}
+@keyframes salad_open{
+    from{transform: rotate(0deg)}
+    to{transform: translateY(0px) rotate(45deg)}
+}
+@keyframes salad_close{
+    from{transform: rotate(45deg)}
+    to{transform: rotate(0deg)}
 }
 
 
@@ -115,4 +124,19 @@
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
     animation-direction: reverse;
+}
+
+.salad-rotateOpen{
+    animation-name:salad_open;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+.salad-rotateClose{
+    animation-name:salad_close;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.meat-hidden{
+    opacity: 0
 }
