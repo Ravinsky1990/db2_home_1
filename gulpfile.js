@@ -1,6 +1,7 @@
 const gulp = require ("gulp");
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
+const pug = require("gulp-pug");
 
 //Tasks functions
 const compile_scss = ()=>{
@@ -9,14 +10,24 @@ const compile_scss = ()=>{
     .pipe(gulp.dest('./build/css'))
 }
 
+const pug_compiler = ()=>{
+    return gulp.src("./src/pug_templates/index.pug")
+    .pipe(pug({
+        pretty: true
+    }))
+    .pipe(gulp.dest("./build/"))
+}
+
+
 //watcher fn
 const watch_fn = ()=>{
     gulp.watch("./src/sass/**/*.scss",compile_scss);
+    gulp.watch("./src/pug_templates/**/*.pug", pug_compiler)
 }
 
-//tast register
-gulp.task("scss", compile_scss);
-gulp.task('watch', watch_fn);
+exports.build = gulp.series(pug_compiler, compile_scss, watch_fn)
+
+
 
 
 

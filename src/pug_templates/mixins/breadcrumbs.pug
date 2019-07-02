@@ -1,0 +1,5 @@
+mixin breadcrumbs(imgSrc, alt, shevronVisible, crumb)
+	li.top-line__route-list-item
+		a(href="#" class="top-line__rout-link")= crumb
+		img(src=`${imgSrc}` alt=`${alt}` class=`top-line__shevron ${shevronVisible?"top-line__shevron_visible":false}`)
+		
