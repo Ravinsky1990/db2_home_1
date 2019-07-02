@@ -1,0 +1,142 @@
+main.user-chat
+	section.user-list
+		include ./mixins/userItem.pug
+		-
+			const userList=[
+				{
+					time:"9:32",
+					avatarSrc: "img/miranda.png",
+					altAvatar: "usr-avatar",
+					soundIcon: "img/saundicon.svg",
+					soundActiv: true,
+					userActive: true,
+					UserName: "Miranda Hops",
+					userMessage: "Excepteur sint occaecatar…"
+				},
+				{
+					time:"9:32",
+					avatarSrc: "img/barry.png",
+					altAvatar: "usr-avatar",
+					soundIcon: "img/saundicon.svg",
+					soundActiv: false,
+					userActive: false,
+					UserName: "Barry Callebaut",
+					userMessage: "Nemo enim ipsam volupta…"
+				},
+				{
+					time:"22:01",
+					avatarSrc: "img/stacey.png",
+					altAvatar: "usr-avatar",
+					soundIcon: "img/saundicon.svg",
+					soundActiv: false,
+					userActive: true,
+					UserName: "Stacey Dosh",
+					userMessage: "Ut enim ad minima veniam…"
+				},
+				{
+					time:"19:15",
+					avatarSrc: "img/michael.png",
+					altAvatar: "usr-avatar",
+					soundIcon: "img/saundicon.svg",
+					soundActiv: false,
+					userActive: false,
+					UserName: "Michael Kors",
+					userMessage: "To take a trivial example…"
+				},
+				{
+					time:"9:32",
+					avatarSrc: "img/johny.png",
+					altAvatar: "usr-avatar",
+					soundIcon: "img/saundicon.svg",
+					soundActiv: false,
+					userActive: true,
+					UserName: "Johny Cash",
+					userMessage: "Great explorer of the truth…"
+				},
+				{
+					time:"22:01",
+					avatarSrc: "img/stacey.png",
+					altAvatar: "usr-avatar",
+					soundIcon: "img/saundicon.svg",
+					soundActiv: false,
+					userActive: false,
+					UserName: "Stacey Dosh",
+					userMessage: "Ut enim ad minima veniam…"
+				}
+			]
+		each user in userList
+			+userItem(user.time, user.avatarSrc, user.altAvatar, user.soundIcon, user.soundActiv, user.userActive, user.UserName, user.userMessage)
+	section.dialog
+		div.search-message
+			img(src="img/search.svg", alt="search" class="search-message__icon")
+			input(type="text" placeholder="Search message..." class="search-message__input")
+		div.dialog-content
+			include ./mixins/dialogItem.pug
+			-
+				const dialogData=[
+					{
+						avatar: "img/avatar.png",
+						avatarVisible: true,
+						LeftCornerImgVsible: true,
+						RightCornerImgVisible: false,
+						message: "On the other hand, we denounce with righteous indignation!",
+						time: "01:14"
+					},
+					{
+						avatar: "img/avatar.png",
+						avatarVisible: false,
+						LeftCornerImgVsible: false,
+						RightCornerImgVisible: true,
+						message: "On the other hand, we denounce with righteous indignation!",
+						time: "01:14"
+					},
+					{
+						avatar: "img/avatar.png",
+						avatarVisible: true,
+						LeftCornerImgVsible: false,
+						RightCornerImgVisible: true,
+						message: "On the other hand, we denounce with righteous indignation!",
+						time: "01:14"
+					},
+					{
+						avatar: "img/avatar.png",
+						avatarVisible: true,
+						LeftCornerImgVsible: true,
+						RightCornerImgVisible: false,
+						message: "On the other hand, we denounce with righteous indignation!",
+						time: "01:14"
+					},
+					{
+						avatar: "img/avatar.png",
+						avatarVisible: false,
+						LeftCornerImgVsible: false,
+						RightCornerImgVisible: true,
+						message: "On the other hand, we denounce with righteous indignation!",
+						time: "01:14"
+					},
+					{
+						avatar: "img/avatar.png",
+						avatarVisible: true,
+						LeftCornerImgVsible: true,
+						RightCornerImgVisible: false,
+						message: "On the other hand, we denounce with righteous indignation!",
+						time: "01:14"
+					},
+					{
+						avatar: "img/avatar.png",
+						avatarVisible: true,
+						LeftCornerImgVsible: true,
+						RightCornerImgVisible: false,
+						message: "On the other hand, we denounce with righteous indignation!",
+						time: "01:14"
+					}
+				]
+			each msg in dialogData
+				+dialogItem(msg.avatar, msg.avatarVisible, msg.LeftCornerImgVisible, msg.RightCornerImgVisible, msg.message, msg.time)
+		div.send-message
+			input(type="text" placeholder="Write a message…" class="send-message__input")
+			div.send-message__icons-wrap
+				img(src="img/smiling-emoticon-square-face@2x.svg" alt="smile" class="send-message__smile")
+				img(src="img/add.svg" alt="add" class="send-message__smile__add")
+				div.send-message__send-icon
+					img(src="img/send.svg", alt="send")

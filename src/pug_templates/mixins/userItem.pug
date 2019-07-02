@@ -1,1 +1,10 @@
-mixin userItem()
+mixin userItem(time, avatarSrc, altAvatar, soundIcon, soundActiv, userActive, UserName, userMessage)
+	div.user-item
+		span.user-item__time= time
+		img(src=`${avatarSrc}` alt=`${altAvatar}`)
+		div.user-item__meta
+			div.user-item__name
+				span= UserName
+					i(class=`user-item__active-marker ${userActive?"user-item__active-marker_visible":false}`)
+				img(src=`${soundIcon}` alt="sound" class=`user-item__sound-marker ${soundActiv?"user-item__sound-marker_visible":false}`)
+			span.user-item__message= userMessage

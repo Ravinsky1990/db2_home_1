@@ -1,0 +1,9 @@
+mixin dialogItem(avatar, avatarVisible, LeftCornerImgVsible, RightCornerImgVisible, message, time)
+	div.dialog-content__dialog-item
+		div.dialog-content__img-wrapper
+			img(src=`${avatar}` alt="avatar" class=`dialog-content__avatar ${avatarVisible?"dialog-content__avatar__visible":false}`)
+		div.dialog-content__msg-wrapper
+			img(src="img/corner.svg" alt="corner-left" class=`dialog-content__cornerimg ${LeftCornerImgVsible?"dialog-content__cornerimg__visible":false}`)
+			img(src="img/corner-right.svg" alt="corner-right" class=`dialog-content__cornerimg-right ${RightCornerImgVisible?"dialog-content__cornerimg-right__visible":false}`)
+			span.dialog-content__msg= time
+			span.dialog-content__time= message
