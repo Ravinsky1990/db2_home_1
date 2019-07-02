@@ -11,10 +11,14 @@
 
         if(sidebar.classList.contains("sidebar_visible")){
             sidebar.className = "sidebar sidebar_hidden";
-            engredients[0].className = "burger__cheese cheese-rotateClose"
+            engredients[0].className = "burger__cheese cheese-rotateClose",
+            engredients[1].className = "burger__salad salad-rotateClose"
+            engredients[2].className = "burger__meat"
         }else{
             sidebar.className = "sidebar sidebar_visible" ;
-            engredients[0].className = "burger__cheese cheese-rotateOpen"
+            engredients[0].className = "burger__cheese cheese-rotateOpen",
+            engredients[1].className = "burger__salad salad-rotateOpen"
+            engredients[2].className = "burger__meat meat-hidden"
         }
     })
 

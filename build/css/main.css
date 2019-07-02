@@ -73,8 +73,8 @@ body {
   visibility: visible; }
 
 .burger {
-  width: 38px;
-  height: 32px;
+  width: 34px;
+  height: 28px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -88,7 +88,8 @@ body {
   .burger .burger__cheese, .burger .burger__salad, .burger .burger__meat {
     display: block;
     background-color: #01134E;
-    height: 4px; }
+    height: 4px;
+    transition: 0.3s all ease; }
 
 @keyframes cheese_open {
   from {
@@ -101,6 +102,18 @@ body {
     transform: rotate(0deg); }
   to {
     transform: translateY(10px) rotate(-45deg); } }
+
+@keyframes salad_open {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: translateY(0px) rotate(45deg); } }
+
+@keyframes salad_close {
+  from {
+    transform: rotate(45deg); }
+  to {
+    transform: rotate(0deg); } }
 
 .sidebar_visible {
   transform: translateX(0);
@@ -120,6 +133,19 @@ body {
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   animation-direction: reverse; }
+
+.salad-rotateOpen {
+  animation-name: salad_open;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards; }
+
+.salad-rotateClose {
+  animation-name: salad_close;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards; }
+
+.meat-hidden {
+  opacity: 0; }
 
 /* top-line */
 .top-line {

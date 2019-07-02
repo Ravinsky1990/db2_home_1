@@ -1,0 +1,5 @@
+mixin sidebar__link(markerActive, verticalMarkerActive, imgSrc, alt)
+	a(href="#" class="sidebar__link")
+			img(src=`${imgSrc}`, alt=`${alt}`)
+			span(class=`sidebar__num-marker ${markerActive?"sidebar__num-marker_active":false}`)= 1
+			span(class=`sidebar__vertical-marker ${verticalMarkerActive?"sidebar__vertical-marker_active":false}`)
